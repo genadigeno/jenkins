@@ -1,5 +1,6 @@
 package geno.learn.jenkins.controller;
 
+import org.apache.catalina.util.ServerInfo;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,6 +12,7 @@ public class IndexController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ResponseEntity<?> index(){
         System.out.println("Ok");
-        return ResponseEntity.ok("Let's Go!");
+        String server = ServerInfo.getServerInfo();
+        return ResponseEntity.ok("Machine: " + server);
     }
 }

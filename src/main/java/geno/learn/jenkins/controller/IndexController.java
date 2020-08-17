@@ -11,6 +11,6 @@ public class IndexController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ResponseEntity<?> index(){
         System.out.println("Ok");
-        return ResponseEntity.ok("Ok");
+        return ResponseEntity.ok("Let's Go!");
     }
 }

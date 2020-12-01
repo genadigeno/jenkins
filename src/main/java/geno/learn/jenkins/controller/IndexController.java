@@ -11,7 +11,6 @@ public class IndexController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ResponseEntity<?> index(){
-        System.out.println("Ok");
         String server = ServerInfo.getServerInfo();
         return ResponseEntity.ok("Machine: " + server);
     }

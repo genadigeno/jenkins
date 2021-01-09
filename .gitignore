@@ -1,4 +1,5 @@
 HELP.md
+target/*.war
 target/classes/
 target/demo/
 target/generated-sources/

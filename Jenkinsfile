@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('clone repository and clean it') {
+        stage('Clean') {
             steps {
-                sh "mvn clean -f jenkins"
+                sh "mvn clean"
             }
         }
         stage('Test') {
             steps {
-                sh "mvn test -f jenkins"
+                sh "mvn test"
             }
         }
         stage('Deploy') {
             steps {
-                sh "mvn package -f jenkins"
+                sh "mvn package"
             }
         }
     }

@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('GitHub'){
             options {
-                skiptDefaultCheckout()
+                skipDefaultCheckout()
             }
             steps {
                 echo "TEST"

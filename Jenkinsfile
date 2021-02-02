@@ -20,10 +20,12 @@ pipeline {
     }*/
     stages {
         stage('GitHub'){
-            options{
-                skiptDefaultCheckout()
+            steps {
+                    options{
+                        skiptDefaultCheckout()
+                }
+                echo "TEST"
             }
-            echo "TEST"
         }
     }
 }

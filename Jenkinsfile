@@ -1,6 +1,9 @@
 pipeline {
     agent any
 
+    options {
+        skipDefaultCheckout()
+    }
     /*stages {
         stage('Clean') {
             steps {
@@ -20,9 +23,6 @@ pipeline {
     }*/
     stages {
         stage('GitHub'){
-            options {
-                skipDefaultCheckout()
-            }
             steps {
                 echo "TEST"
             }
